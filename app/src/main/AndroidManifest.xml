@@ -16,6 +16,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".leftActivity"
+            android:label="@string/title_activity_left"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".accumulation"
+            android:label="@string/title_activity_accumulation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".progressupload"
+            android:label="@string/title_activity_progressupload"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".update"
+            android:label="@string/title_activity_update"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
