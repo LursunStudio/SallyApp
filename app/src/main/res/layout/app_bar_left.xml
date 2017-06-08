@@ -20,14 +20,120 @@
 
     </android.support.design.widget.AppBarLayout>
 
+
+
     <include layout="@layout/content_left" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="55dp"
+            >
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="全部"
+                />
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="自己的合約"
+                />
+
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000000">
+                <TableRow
+                    android:background="#ffffff"
+                    android:layout_margin="1dp"
+                    android:id="@+id/date"
+                    >
+                    <TextView
+                        android:height="60dp"
+                        />
+                </TableRow>
+                <TableRow
+                    android:background="#ffffff"
+                    android:layout_margin="1dp"
+                    android:id="@+id/date2"
+                    >
+                    <TextView
+                        android:height="60dp"
+                        />
+                </TableRow>
+                <TableRow
+                    android:background="#ffffff"
+                    android:layout_margin="1dp"
+                    android:id="@+id/date3"
+                    >
+                    <TextView
+                        android:height="60dp"
+                        />
+                </TableRow>
+                <TableRow
+                    android:background="#ffffff"
+                    android:layout_margin="1dp"
+                    android:id="@+id/date4"
+                    >
+                    <TextView
+                        android:height="60dp"
+                        />
+                </TableRow>
+                <TableRow
+                    android:background="#ffffff"
+                    android:layout_margin="1dp"
+                    android:id="@+id/date5"
+                    >
+                    <TextView
+                        android:height="60dp"
+                        />
+                </TableRow>
+                <TableRow
+                    android:background="#ffffff"
+                    android:layout_margin="1dp"
+                    android:id="@+id/date6"
+                    >
+                    <TextView
+                        android:height="60dp"
+                        />
+                </TableRow>
+                <TableRow
+                    android:background="#ffffff"
+                    android:layout_margin="1dp"
+                    android:id="@+id/date7"
+                    >
+                    <TextView
+                        android:height="60dp"
+                        />
+                </TableRow>
+                <TableRow
+                    android:background="#ffffff"
+                    android:layout_margin="1dp"
+                    android:id="@+id/date8"
+                    >
+                    <TextView
+                        android:height="60dp"
+                        />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
 
 </android.support.design.widget.CoordinatorLayout>

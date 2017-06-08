@@ -17,16 +17,16 @@
 
     <include layout="@layout/content_progressupload" />
     <LinearLayout
-        android:layout_height="match_parent"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    >
+    <TextView
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        >
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="(文章列表)\nNO.201713698\nNO.201713142\nNO.201713270"
-            android:textSize="30dp"
-            />
+        android:layout_height="wrap_content"
+        android:text="(文章列表)\nNO.201713698\nNO.201713142\nNO.201713270"
+        android:textSize="30dp"
+        />
     </LinearLayout>
 
 

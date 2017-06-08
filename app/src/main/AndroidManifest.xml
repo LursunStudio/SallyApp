@@ -18,7 +18,7 @@
         </activity>
         <activity
             android:name=".leftActivity"
-            android:label="@string/title_activity_left"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".accumulation"
@@ -27,6 +27,10 @@
         <activity
             android:name=".progressupload"
             android:label="@string/title_activity_progressupload"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".overviewActivity"
+            android:label="@string/title_activity_overview"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".update"
