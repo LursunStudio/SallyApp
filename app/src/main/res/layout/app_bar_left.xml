@@ -57,77 +57,31 @@
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#000000">
-                <TableRow
-                    android:background="#ffffff"
-                    android:layout_margin="1dp"
-                    android:id="@+id/date"
-                    >
-                    <TextView
-                        android:height="60dp"
+                android:background="#ffffff">
+                <TableRow>
+                    <Button
+                        android:id="@id/button"
+                        android:layout_width="380dp"
+                        android:layout_height="wrap_content"
+
+                        android:textSize="25dp"
+                        android:text="NO.201713698\n減肥人生!!!讓我更苗條!!!"
                         />
                 </TableRow>
-                <TableRow
-                    android:background="#ffffff"
-                    android:layout_margin="1dp"
-                    android:id="@+id/date2"
-                    >
-                    <TextView
-                        android:height="60dp"
+                <TableRow>
+                    <Button
+                        android:id="@id/button2"
+                        android:textSize="25dp"
+
+                        android:text="NO.201712685\n肥過頭了 需要減肥"
                         />
                 </TableRow>
-                <TableRow
-                    android:background="#ffffff"
-                    android:layout_margin="1dp"
-                    android:id="@+id/date3"
-                    >
-                    <TextView
-                        android:height="60dp"
-                        />
-                </TableRow>
-                <TableRow
-                    android:background="#ffffff"
-                    android:layout_margin="1dp"
-                    android:id="@+id/date4"
-                    >
-                    <TextView
-                        android:height="60dp"
-                        />
-                </TableRow>
-                <TableRow
-                    android:background="#ffffff"
-                    android:layout_margin="1dp"
-                    android:id="@+id/date5"
-                    >
-                    <TextView
-                        android:height="60dp"
-                        />
-                </TableRow>
-                <TableRow
-                    android:background="#ffffff"
-                    android:layout_margin="1dp"
-                    android:id="@+id/date6"
-                    >
-                    <TextView
-                        android:height="60dp"
-                        />
-                </TableRow>
-                <TableRow
-                    android:background="#ffffff"
-                    android:layout_margin="1dp"
-                    android:id="@+id/date7"
-                    >
-                    <TextView
-                        android:height="60dp"
-                        />
-                </TableRow>
-                <TableRow
-                    android:background="#ffffff"
-                    android:layout_margin="1dp"
-                    android:id="@+id/date8"
-                    >
-                    <TextView
-                        android:height="60dp"
+                <TableRow>
+                    <Button
+
+
+                        android:textSize="25dp"
+                        android:text="NO.201712698\n"
                         />
                 </TableRow>
             </TableLayout>

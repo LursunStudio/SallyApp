@@ -13,11 +13,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 public class leftActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    private LinearLayout line1;
+    private Button but1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,11 +34,10 @@ public class leftActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-        line1= (LinearLayout) findViewById(R.id.date);
 
-        line1.setOnClickListener(new LinearLayout.OnClickListener(){
+        but1= (Button)findViewById(R.id.button);
+
+        but1.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
