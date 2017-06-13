@@ -23,7 +23,13 @@
 
 
     <include layout="@layout/content_left" />
-
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_input_add" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -60,7 +66,7 @@
                 android:background="#ffffff">
                 <TableRow>
                     <Button
-                        android:id="@id/button"
+                        android:id="@+id/button3"
                         android:layout_width="380dp"
                         android:layout_height="wrap_content"
 
@@ -70,7 +76,7 @@
                 </TableRow>
                 <TableRow>
                     <Button
-                        android:id="@id/button2"
+                        android:id="@+id/button4"
                         android:textSize="25dp"
 
                         android:text="NO.201712685\n肥過頭了 需要減肥"
@@ -78,7 +84,7 @@
                 </TableRow>
                 <TableRow>
                     <Button
-
+                        android:id="@+id/button5"
 
                         android:textSize="25dp"
                         android:text="NO.201712698\n"

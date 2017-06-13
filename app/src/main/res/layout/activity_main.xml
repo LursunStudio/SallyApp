@@ -9,16 +9,7 @@
     android:gravity="center"
     android:layout_margin="8dp"
     >
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="150dp"
-        android:minHeight="0dp"
-        android:maxHeight="9999dp"
 
-        android:scaleType="centerInside"
-        android:src="@drawable/app"
-        android:layout_centerVertical="true"
-        />
 
     <LinearLayout
         android:orientation="horizontal"

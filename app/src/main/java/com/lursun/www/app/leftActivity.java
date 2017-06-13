@@ -15,36 +15,39 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 public class leftActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    private Button but1;
+    private Button button03;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_left);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
-
-
-        but1= (Button)findViewById(R.id.button);
-
-        but1.setOnClickListener(new Button.OnClickListener(){
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(leftActivity.this, "Fab clicked", Toast.LENGTH_LONG).show();
+            }
+        });
+        button03= (Button)findViewById(R.id.button3);
+        button03.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(leftActivity.this,LookActivity.class);
+                intent.setClass(leftActivity.this,setActivity.class);
                 startActivity(intent);
             }
         });
+
     }
 
     @Override
