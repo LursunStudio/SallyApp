@@ -58,43 +58,44 @@
             android:ems="10"
             />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:gravity="center|left"
-        >
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="期限："
-            />
+            android:text="期限：" />
+
         <EditText
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:enabled="false"
-            />
+            android:enabled="false" />
+
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/datapicker"
-            />
+            android:src="@drawable/datapicker" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="~"
-            />
+            android:text="~" />
+
         <EditText
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:enabled="false"
-            />
+            android:enabled="false" />
+
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/datapicker"
-            />
+            android:src="@drawable/datapicker" />
     </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -122,6 +123,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/button"
                 android:text="放棄"
                 />
         </LinearLayout>
@@ -135,6 +137,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/button2"
                 android:text="準備好了"
                 />
         </LinearLayout>

@@ -10,4 +10,18 @@
     <string name="title_activity_progressupload">progressupload</string>
     <string name="title_activity_update">update</string>
     <string name="title_activity_overview">overview</string>
+
+
+    <string name="normal_dialog">Normal Dialog</string>
+    <string name="lunch_time">提醒</string>
+    <string name="want_to_eat">確定要放棄建立嗎?</string>
+    <string name="ok">確定</string>
+    <string name="gogo">已放棄建立</string>
+    <string name="not_hungry">取消</string>
+    <string name="diet">已取消</string>
+
+    <string name="set">即將建立合約</string>
+
+    <string name="setok">已建立</string>
+
 </resources>

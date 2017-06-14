@@ -22,19 +22,27 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".accumulation"
-            android:label="@string/title_activity_accumulation"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LookActivity"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".setActivity"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".progressupload"
-            android:label="@string/title_activity_progressupload"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".overviewActivity"
-            android:label="@string/title_activity_overview"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".update"
-            android:label="@string/title_activity_update"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

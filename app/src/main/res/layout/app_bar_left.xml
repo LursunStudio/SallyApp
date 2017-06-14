@@ -29,6 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
+        android:onClick="buttonclick"
         app:srcCompat="@android:drawable/ic_input_add" />
 
     <LinearLayout
@@ -82,14 +83,7 @@
                         android:text="NO.201712685\n肥過頭了 需要減肥"
                         />
                 </TableRow>
-                <TableRow>
-                    <Button
-                        android:id="@+id/button5"
 
-                        android:textSize="25dp"
-                        android:text="NO.201712698\n"
-                        />
-                </TableRow>
             </TableLayout>
         </ScrollView>
     </LinearLayout>

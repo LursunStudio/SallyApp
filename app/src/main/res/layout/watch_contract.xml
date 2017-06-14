@@ -5,31 +5,31 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name"
+        android:text="減肥人生!!!讓我更苗條!!!"
         android:id="@+id/name"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="目前體重"
+        android:text="目前體重："
         android:id="@+id/now_weight"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="目標體重"
+        android:text="目標體重："
         android:id="@+id/target_weight"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="期限"
+        android:text="期限："
         android:id="@+id/date"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="簡述內容"
+        android:text="簡述內容："
         android:id="@+id/briefing"
         />
     <LinearLayout

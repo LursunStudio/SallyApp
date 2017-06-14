@@ -35,7 +35,9 @@ public class leftActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(leftActivity.this, "Fab clicked", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent();
+                intent.setClass(leftActivity.this,setActivity.class);
+                leftActivity.this.startActivity(intent);
             }
         });
         button03= (Button)findViewById(R.id.button3);
@@ -43,7 +45,7 @@ public class leftActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(leftActivity.this,setActivity.class);
+                intent.setClass(leftActivity.this,LookActivity.class);
                 startActivity(intent);
             }
         });
