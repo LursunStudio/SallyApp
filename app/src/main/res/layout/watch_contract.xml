@@ -20,27 +20,27 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="目前體重：80KG"
+        android:text="目前體重：80KG\n"
         android:textSize="25dp"
         android:id="@+id/now_weight"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="目標體重：70KG"
+        android:text="目標體重：70KG\n"
         android:textSize="25dp" android:id="@+id/target_weight"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="期限：2017/04/01~2017/06/01"
+        android:text="期限：2017/04/01~2017/06/01\n"
         android:id="@+id/date"
         android:textSize="25dp"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="簡述內容：\n　　肥過頭了需要減肥，之前過年吃太胖需要減回標準體重，不然褲子都穿不下了。"
+        android:text="簡述內容：\n\n　　肥過頭了需要減肥，之前過年吃太胖需要減回標準體重，不然褲子都穿不下了。"
         android:id="@+id/briefing"
         android:textSize="25dp"
         />

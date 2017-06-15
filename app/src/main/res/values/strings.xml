@@ -33,4 +33,5 @@
     <string name="talk4">你那麼懶惰一定不會成功啦</string>
     <string name="talk5">以朋友的身分我來督促你了!!!</string>
     <string name="title_activity_setok">setokActivity</string>
+    <string name="title_activity_registered">registeredActivity</string>
 </resources>
