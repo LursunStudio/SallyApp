@@ -24,7 +24,7 @@
            <TextView
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:text="累積點數：\n目標達成點數：167\n參與點數\n\n\n\n\n\n\n\n總點數：221"
+               android:text="累積點數：\n\n目標達成點數：167\n\n參與點數：30\n\n\n\n\n\n\n\n總點數：221"
                android:textSize="30dp"
                />
        </LinearLayout>

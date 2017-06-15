@@ -5,7 +5,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="陳圓圓"
+        android:text="陳小牛"
         android:textSize="35dp"
         android:id="@+id/name"
         />
@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:text="編號：201712685"
+        android:text="編號：201713698"
         android:textSize="20dp"
         android:id="@+id/now_weigh"
         />
@@ -40,7 +40,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="簡述內容：\n　　肥過頭了需要減肥，之前過年吃太胖需要減回標準體重，不然褲子都穿不下了。"
+        android:text="簡述內容：\n　　減肥人生!!!讓我更苗條!!!我真的太胖了，為了不重蹈覆轍以及有個好身材，請大家來督促我。"
         android:id="@+id/briefing"
         android:textSize="25dp"
         />
@@ -61,7 +61,7 @@
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="我要參與"
+                android:text="放棄"
                 />
         </LinearLayout>
         <LinearLayout
@@ -75,7 +75,7 @@
                 android:id="@+id/button2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="留言板"
+                android:text="送出"
                 />
         </LinearLayout>
     </LinearLayout>

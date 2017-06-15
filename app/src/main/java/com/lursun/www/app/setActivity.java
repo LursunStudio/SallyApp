@@ -12,13 +12,22 @@ import android.widget.Toast;
 
 public class setActivity extends AppCompatActivity {
     private Button normalDialog;
-    private Button normalDialog2;
+    private Button button2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.make_contract);
          initView();
-         initView2();
+        button2= (Button)findViewById(R.id.button2);
+
+        button2.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(setActivity.this,setokActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     private void initView() {
         normalDialog = (Button) findViewById(R.id.button);
@@ -29,15 +38,7 @@ public class setActivity extends AppCompatActivity {
             }
         });
     }
-    private void initView2() {
-        normalDialog2 = (Button) findViewById(R.id.button2);
-        normalDialog2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                normalDialogEvent2();
-            }
-        });
-    }
+
     private void normalDialogEvent(){
         new AlertDialog.Builder(setActivity.this)
                 .setTitle(R.string.lunch_time)
@@ -60,26 +61,5 @@ public class setActivity extends AppCompatActivity {
                 })
                 .show();
     }
-    private void normalDialogEvent2(){
-        new AlertDialog.Builder(setActivity.this)
-                .setTitle(R.string.lunch_time)
-                .setMessage(R.string.set)
-                .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getApplicationContext(), R.string.setok, Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent();
-                        intent.setClass(setActivity.this,leftActivity.class);
-                        setActivity.this.startActivity(intent);
-                    }
-                })
 
-                .setNeutralButton(R.string.not_hungry, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getApplicationContext(), R.string.diet, Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .show();
-    }
 }

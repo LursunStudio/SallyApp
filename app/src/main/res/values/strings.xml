@@ -14,14 +14,23 @@
 
     <string name="normal_dialog">Normal Dialog</string>
     <string name="lunch_time">提醒</string>
-    <string name="want_to_eat">確定要放棄建立嗎?</string>
+    <string name="want_to_eat">確定要放棄建立嗎？</string>
     <string name="ok">確定</string>
     <string name="gogo">已放棄建立</string>
     <string name="not_hungry">取消</string>
     <string name="diet">已取消</string>
-
     <string name="set">即將建立合約</string>
-
     <string name="setok">已建立</string>
+    <string name="title_activity_join">joinActivity</string>
 
+    <string name="cancel">確定放棄參與嗎？</string>
+    <string name="cancel2">已放棄參與</string>
+    <string name="joinok">已參與編號201713698所發起的活動</string>
+    <string name="settok">已參與</string>
+    <string name="talk">哇~版主好認真</string>
+    <string name="talk2">要持之以恆喔!!</string>
+    <string name="talk3">我也來參一腳了</string>
+    <string name="talk4">你那麼懶惰一定不會成功啦</string>
+    <string name="talk5">以朋友的身分我來督促你了!!!</string>
+    <string name="title_activity_setok">setokActivity</string>
 </resources>

@@ -19,7 +19,8 @@ import android.widget.Toast;
 
 public class leftActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    private Button button03;
+    private Button button01;
+    private Button button04;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,8 +41,8 @@ public class leftActivity extends AppCompatActivity
                 leftActivity.this.startActivity(intent);
             }
         });
-        button03= (Button)findViewById(R.id.button3);
-        button03.setOnClickListener(new Button.OnClickListener(){
+        button04= (Button)findViewById(R.id.button4);
+        button04.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
@@ -49,7 +50,15 @@ public class leftActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
-
+        button01= (Button)findViewById(R.id.button);
+        button01.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(leftActivity.this,accumulation.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
