@@ -33,18 +33,6 @@
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".progressupload"
-            android:label=""
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".overviewActivity"
-            android:label=""
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".update"
-            android:label=""
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".joinActivity"
             android:label="@string/title_activity_join"
             android:theme="@style/AppTheme.NoActionBar" />
