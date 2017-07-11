@@ -13,13 +13,13 @@
 
 
     <string name="normal_dialog">Normal Dialog</string>
-    <string name="lunch_time">提醒</string>
+    <string name="lunch_time">溫馨提醒</string>
     <string name="want_to_eat">確定要放棄建立嗎？</string>
     <string name="ok">確定</string>
     <string name="gogo">已放棄建立</string>
     <string name="not_hungry">取消</string>
     <string name="diet">已取消</string>
-    <string name="set">即將建立合約</string>
+    <string name="set">即將建立合約，為了您的健康著想，請不要嘗試過激的減肥方法!</string>
     <string name="setok">已建立</string>
     <string name="title_activity_join">joinActivity</string>
 
