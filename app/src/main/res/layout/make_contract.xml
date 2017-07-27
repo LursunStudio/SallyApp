@@ -3,7 +3,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
+
+    android:background="@drawable/shape"
     >
     <TextView
         android:layout_width="wrap_content"
@@ -124,6 +125,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/button"
+                android:background="@drawable/shape2"
                 android:text="放棄"
                 />
         </LinearLayout>
@@ -138,6 +140,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/button2"
+                android:background="@drawable/shape2"
                 android:text="準備好了"
                 />
         </LinearLayout>
