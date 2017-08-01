@@ -4,8 +4,9 @@
     <!-- 預設時 -->
     <item android:color="@android:color/black">
         <shape android:shape="rectangle"  >
-            <corners android:radius="15dp" />
-            <gradient android:angle="0" android:startColor="#FF8000" android:endColor="#FF8000"  />
+
+
+            <gradient android:angle="0" android:startColor="#E8FFF5" android:endColor="#E8FFF5"  />
         </shape>
     </item>
 

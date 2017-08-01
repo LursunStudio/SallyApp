@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.lursun.www.app.leftActivity" android:background="@drawable/shape">
+    tools:context="com.lursun.www.app.leftActivity" android:background="@drawable/shape5">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -21,8 +21,6 @@
     </android.support.design.widget.AppBarLayout>
 
 
-
-    <include layout="@layout/content_left" />
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
@@ -50,8 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/shape2"
-                android:layout_margin="5dp"
+                android:background="@drawable/shape4"
                 android:text="全部"
                 />
             <Button
@@ -60,8 +57,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@drawable/shape4"
                 android:layout_gravity="center"
-                android:background="@drawable/shape2"
                 android:text="自己的合約"
                 />
 
@@ -94,11 +91,56 @@
                         android:text="NO.201712685\n肥過頭了 需要減肥"
                         />
                 </TableRow>
-
+                <TableRow>
+                    <Button
+                        android:id="@+id/button5"
+                        android:textSize="25dp"
+                        android:background="@drawable/shape3"
+                        android:layout_margin="5dp"
+                        android:text="NO.201712685\n肥過頭了 需要減肥"
+                        />
+                </TableRow>
+                <TableRow>
+                    <Button
+                        android:id="@+id/button6"
+                        android:textSize="25dp"
+                        android:background="@drawable/shape3"
+                        android:layout_margin="5dp"
+                        android:text="NO.201712685\n肥過頭了 需要減肥"
+                        />
+                </TableRow>
+                <TableRow>
+                    <Button
+                        android:id="@+id/button7"
+                        android:textSize="25dp"
+                        android:background="@drawable/shape3"
+                        android:layout_margin="5dp"
+                        android:text="NO.201712685\n肥過頭了 需要減肥"
+                        />
+                </TableRow>
+                <TableRow>
+                    <Button
+                        android:id="@+id/button8"
+                        android:textSize="25dp"
+                        android:background="@drawable/shape3"
+                        android:layout_margin="5dp"
+                        android:text="NO.201712685\n肥過頭了 需要減肥"
+                        />
+                </TableRow>
+                <TableRow>
+                    <Button
+                        android:id="@+id/button9"
+                        android:textSize="25dp"
+                        android:background="@drawable/shape3"
+                        android:layout_margin="5dp"
+                        android:text="NO.201712685\n肥過頭了 需要減肥"
+                        />
+                </TableRow>
             </TableLayout>
         </ScrollView>
     </LinearLayout>
 
+    <include layout="@layout/content_left" />
 
 
 </android.support.design.widget.CoordinatorLayout>

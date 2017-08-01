@@ -5,11 +5,13 @@
     android:layout_height="match_parent"
     android:padding="10dp"
     android:background="@drawable/shape"
+
     >
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="發起合約"
+        android:textColor="#000000"
         />
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,6 +21,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#000000"
             android:text="發起人："
             />
         <EditText
@@ -35,6 +38,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#000000"
             android:text="目前體重："
             />
         <EditText
@@ -50,6 +54,7 @@
         >
         <TextView
             android:layout_width="wrap_content"
+            android:textColor="#000000"
             android:layout_height="wrap_content"
             android:text="目標體重："
             />
@@ -59,7 +64,23 @@
             android:ems="10"
             />
     </LinearLayout>
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="#000000"
+            android:layout_height="wrap_content"
+            android:text="押金："
+            />
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            />
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -69,6 +90,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#000000"
             android:text="期限：" />
 
         <EditText
@@ -100,6 +122,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#000000"
         android:text="簡述內容"
         />
     <EditText
