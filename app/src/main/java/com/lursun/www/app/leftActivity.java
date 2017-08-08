@@ -19,12 +19,13 @@ import android.widget.Toast;
 
 public class leftActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    private Button button01;
+
     private Button button04;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_left);
+        //
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -32,6 +33,9 @@ public class leftActivity extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+        //
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,25 +54,7 @@ public class leftActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
-        button01= (Button)findViewById(R.id.button);
-        button01.setOnClickListener(new Button.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(leftActivity.this,accumulation.class);
-                startActivity(intent);
-            }
-        });
-    }
 
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
     }
 
     @Override
@@ -92,6 +78,16 @@ public class leftActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
+    //工具列
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -101,6 +97,9 @@ public class leftActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
+            Intent intent = new Intent(this,accumulation.class);
+            startActivity(intent);
+            this.finish();
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_share) {

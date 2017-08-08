@@ -7,18 +7,19 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="陳小牛"
-        android:textSize="35dp"
-        android:id="@+id/name"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:text="編號：201713698"
         android:textSize="20dp"
         android:id="@+id/now_weigh"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="陳小牛"
+        android:textSize="35dp"
+        android:id="@+id/name"
+        />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,8 +36,16 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="期限：2017/04/01~2017/06/01\n"
+        android:text="期限："
         android:id="@+id/date"
+        android:textSize="25dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="2017/04/01~2017/06/01\n"
+        android:id="@+id/date2"
         android:textSize="25dp"
         />
     <TextView

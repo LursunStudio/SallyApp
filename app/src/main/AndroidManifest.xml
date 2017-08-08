@@ -19,10 +19,12 @@
         <activity
             android:name=".leftActivity"
             android:label=""
+            android:exported="true"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".accumulation"
             android:label=""
+            android:exported="true"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LookActivity"

@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:gravity="left"
             android:textColor="#600030"
-            android:text="相約之鏈"
+            android:text="   相約之鏈"
             android:textSize="40dp"
 
             />
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:gravity="right"
             android:textColor="#600030"
-            android:text="-----約減約瘦      "
+            android:text="---約減約瘦   "
             android:textSize="30dp"
 
             />
@@ -51,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#600030"
-                android:text="帳號"
+                android:text="  帳號"
                 android:textSize="28dp"
 
                 />
@@ -75,7 +75,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="密碼"
+                android:text="  密碼"
                 android:textColor="#600030"
                 android:textSize="28dp"
                 />

@@ -6,13 +6,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="陳圓圓"
-        android:textSize="35dp"
-        android:id="@+id/name"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:text="編號：201712685"
         android:textSize="20dp"
@@ -21,29 +14,80 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="目前體重：80KG\n"
-        android:textSize="25dp"
-        android:id="@+id/now_weight"
+        android:text="陳圓圓"
+        android:textSize="35dp"
+        android:id="@+id/name"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="目標體重：70KG\n"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/now_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="目前體重：80KG"
+        android:textSize="25dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="目標體重：70KG"
         android:textSize="25dp" android:id="@+id/target_weight"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="期限：2017/04/01~2017/06/01\n"
+        android:textSize="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="期限："
         android:id="@+id/date"
         android:textSize="25dp"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="簡述內容：\n\n　　肥過頭了需要減肥，之前過年吃太胖需要減回標準體重，不然褲子都穿不下了。"
+        android:textSize="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2017/04/01~2017/06/01"
+        android:layout_gravity="right"
+        android:id="@+id/date2"
+        android:textSize="25dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="簡述內容："
         android:id="@+id/briefing"
         android:textSize="25dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="　　肥過頭了需要減肥，之前過年吃太胖需要減回標準體重，不然褲子都穿不下了。"
         />
     <LinearLayout
         android:layout_width="match_parent"
