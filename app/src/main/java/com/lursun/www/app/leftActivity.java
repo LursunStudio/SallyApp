@@ -101,11 +101,17 @@ public class leftActivity extends AppCompatActivity
             startActivity(intent);
             this.finish();
         } else if (id == R.id.nav_gallery) {
-
+            Intent intent = new Intent(this,update.class);
+            startActivity(intent);
+            this.finish();
         } else if (id == R.id.nav_share) {
-
+            Intent intent = new Intent(this,about.class);
+            startActivity(intent);
+            this.finish();
         } else if (id == R.id.nav_send) {
-
+            Intent intent = new Intent(this,setting.class);
+            startActivity(intent);
+            this.finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

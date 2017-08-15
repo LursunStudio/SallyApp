@@ -21,6 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="left"
+            android:textColor="#000000"
             android:text="註冊"
             android:textSize="40dp"
 
@@ -35,7 +36,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="姓名"
+                android:text="姓名："
+                android:textColor="#000000"
                 android:textSize="28dp"
 
                 />
@@ -59,7 +61,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="帳號"
+                android:text="帳號："
+                android:textColor="#000000"
                 android:textSize="28dp"
 
                 />
@@ -83,7 +86,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="密碼"
+                android:text="密碼："
+                android:textColor="#000000"
                 android:textSize="28dp" />
 
             <EditText
@@ -104,7 +108,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="密碼確認"
+                android:text="密碼確認 ："
+                android:textColor="#000000"
                 android:textSize="28dp" />
 
             <EditText

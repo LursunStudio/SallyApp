@@ -18,13 +18,13 @@
         </activity>
         <activity
             android:name=".leftActivity"
-            android:label=""
             android:exported="true"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".accumulation"
-            android:label=""
             android:exported="true"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LookActivity"
@@ -45,6 +45,18 @@
         <activity
             android:name=".registeredActivity"
             android:label="@string/title_activity_registered"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".update"
+            android:label="@string/title_activity_update"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".about"
+            android:label="@string/title_activity_about"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".setting"
+            android:label="@string/title_activity_setting"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

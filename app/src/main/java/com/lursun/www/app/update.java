@@ -9,22 +9,25 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
-public class accumulation extends AppCompatActivity {
+public class update extends AppCompatActivity {
     private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_accumulation);
+        setContentView(R.layout.activity_update);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         button= (Button)findViewById(R.id.button);
         button.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(accumulation.this,leftActivity.class);
+                intent.setClass(update.this,leftActivity.class);
                 startActivity(intent);
             }
         });
 
     }
+
 
 }

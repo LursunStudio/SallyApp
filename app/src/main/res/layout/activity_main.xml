@@ -17,104 +17,121 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="left"
-            android:textColor="#600030"
             android:text="   相約之鏈"
+            android:textColor="#600030"
             android:textSize="40dp"
 
             />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:textColor="#600030"
             android:text="---約減約瘦   "
+            android:textColor="#600030"
             android:textSize="30dp"
 
             />
+
         <ImageView
             android:layout_width="200dp"
             android:layout_height="250dp"
-            android:src="@drawable/taco"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:src="@drawable/taco" />
+
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            >
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#600030"
                 android:text="  帳號"
+                android:textColor="#600030"
                 android:textSize="28dp"
 
                 />
+
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000000"
-                android:maxLength="15"
                 android:ems="15"
-                android:textSize="28dp"
-                />
+                android:maxLength="15"
+                android:textColor="#000000"
+                android:textSize="28dp" />
 
 
         </LinearLayout>
+
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            >
+            android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="  密碼"
                 android:textColor="#600030"
-                android:textSize="28dp"
-                />
+                android:textSize="28dp" />
+
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:maxLength="15"
                 android:ems="15"
-                android:textSize="28dp"
-                />
+                android:maxLength="15"
+                android:textSize="28dp" />
 
         </LinearLayout>
+
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            >
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
                 <Button
                     android:id="@+id/button"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="@drawable/shape2"
-                    android:text="登入"
-                    android:layout_margin="10dp"
-                    />
+                    android:text="登入" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/button2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="right|center"
                     android:background="@drawable/shape2"
-                    android:text="註冊"/>
-
+                    android:text="註冊" />
+            </LinearLayout>
         </LinearLayout>
+
+
     </LinearLayout>
-
-
 
 
 </LinearLayout>
