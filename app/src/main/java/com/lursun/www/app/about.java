@@ -10,16 +10,15 @@ import android.view.View;
 import android.widget.Button;
 
 public class about extends AppCompatActivity {
-    private Button button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        button= (Button)findViewById(R.id.button);
-        button.setOnClickListener(new Button.OnClickListener(){
+        Button backbtn= (Button)findViewById(R.id.back);
+        backbtn.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();

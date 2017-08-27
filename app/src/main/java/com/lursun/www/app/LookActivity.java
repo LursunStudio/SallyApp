@@ -32,7 +32,6 @@ public class LookActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
     private void initView() {
         listDialog = (Button) findViewById(R.id.button2);

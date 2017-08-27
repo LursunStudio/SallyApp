@@ -10,13 +10,13 @@ import android.view.View;
 import android.widget.Button;
 
 public class accumulation extends AppCompatActivity {
-    private Button button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accumulation);
-        button= (Button)findViewById(R.id.button);
-        button.setOnClickListener(new Button.OnClickListener(){
+        Button backbtn= (Button)findViewById(R.id.button);
+        backbtn.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
@@ -24,7 +24,5 @@ public class accumulation extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
-
 }

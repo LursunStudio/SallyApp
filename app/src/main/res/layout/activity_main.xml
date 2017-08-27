@@ -84,8 +84,10 @@
                 android:textSize="28dp" />
 
             <EditText
+                android:id="@+id/editText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:inputType="textPassword"
                 android:ems="15"
                 android:maxLength="15"
                 android:textSize="28dp" />

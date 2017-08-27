@@ -28,6 +28,7 @@
             android:textSize="40dp">
         </TextView>
         <TextView
+            android:id="@+id/actID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="參與編號201713698的活動\n"
