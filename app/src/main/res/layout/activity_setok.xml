@@ -80,6 +80,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/shape2"
+                android:onClick="toCancelSetok"
                 android:text="放棄"
                 />
         </LinearLayout>
@@ -95,6 +96,7 @@
                 android:background="@drawable/shape2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="toSubmitSetok"
                 android:text="送出"
                 />
         </LinearLayout>

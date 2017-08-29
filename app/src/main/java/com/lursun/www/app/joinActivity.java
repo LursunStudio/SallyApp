@@ -14,8 +14,6 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 public class joinActivity extends AppCompatActivity {
-    private Button normalDialog;
-    private Button normalDialog2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

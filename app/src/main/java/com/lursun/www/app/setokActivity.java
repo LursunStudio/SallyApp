@@ -21,28 +21,8 @@ public class setokActivity extends AppCompatActivity {
         setContentView(R.layout.activity_setok);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        initView();
-        initView2();
     }
-    private void initView() {
-        normalDialog = (Button) findViewById(R.id.button);
-        normalDialog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                normalDialogEvent();
-            }
-        });
-    }
-    private void initView2() {
-        normalDialog2 = (Button) findViewById(R.id.button2);
-        normalDialog2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                normalDialogEvent2();
-            }
-        });
-    }
-    private void normalDialogEvent(){
+    public void toCancelSetok(View view){
         new AlertDialog.Builder(setokActivity.this)
                 .setTitle(R.string.lunch_time)
                 .setMessage(R.string.want_to_eat)
@@ -64,7 +44,7 @@ public class setokActivity extends AppCompatActivity {
                 })
                 .show();
     }
-    private void normalDialogEvent2(){
+    public void toSubmitSetok(View view){
         new AlertDialog.Builder(setokActivity.this)
                 .setTitle(R.string.lunch_time)
                 .setMessage(R.string.set)

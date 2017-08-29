@@ -14,32 +14,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button loginBtn;
-        Button regBtn;
 
-
-        loginBtn= (Button)findViewById(R.id.login);
-
-        loginBtn.setOnClickListener(new Button.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(MainActivity.this,leftActivity.class);
-                startActivity(intent);
-            }
-        });
-        regBtn= (Button)findViewById(R.id.registered);
-
-        regBtn.setOnClickListener(new Button.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(MainActivity.this,registeredActivity.class);
-                startActivity(intent);
-            }
-        });
     }
-
+    public void toLogin(View view){
+        Intent intent = new Intent();
+        intent.setClass(MainActivity.this,leftActivity.class);
+        startActivity(intent);
+    }
+    public void toReg(View view){
+        Intent intent = new Intent();
+        intent.setClass(MainActivity.this,registeredActivity.class);
+        startActivity(intent);
+    }
 
 
 }

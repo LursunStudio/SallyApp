@@ -17,8 +17,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-public class leftActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class leftActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
+{
 
     private Button button04;
     @Override

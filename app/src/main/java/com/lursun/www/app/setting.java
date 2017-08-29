@@ -10,23 +10,19 @@ import android.view.View;
 import android.widget.Button;
 
 public class setting extends AppCompatActivity {
-    private Button button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        button= (Button)findViewById(R.id.button);
-        button.setOnClickListener(new Button.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(setting.this,leftActivity.class);
-                startActivity(intent);
-            }
-        });
 
+    }
+    public void toBackSetting(View view){
+        Intent intent = new Intent();
+        intent.setClass(setting.this,leftActivity.class);
+        startActivity(intent);
     }
 
 }

@@ -13,36 +13,20 @@ import java.util.List;
 
 
 public class LookActivity extends AppCompatActivity {
-    private Button button01;
-    private Button listDialog;
     private List<String> lunch;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.watch_contract);
         initData();
-        initView();
-        button01= (Button)findViewById(R.id.button);
 
-        button01.setOnClickListener(new Button.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(LookActivity.this,joinActivity.class);
-                startActivity(intent);
-            }
-        });
     }
-    private void initView() {
-        listDialog = (Button) findViewById(R.id.button2);
-        listDialog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                listDialog();
-            }
-        });
+    public void toJoin(View view){
+        Intent intent = new Intent();
+        intent.setClass(LookActivity.this,joinActivity.class);
+        startActivity(intent);
     }
-    private void listDialog(){
+    public void showListDialog(View view){
         new AlertDialog.Builder(LookActivity.this)
                 .setItems(lunch.toArray(new String[lunch.size()]), new DialogInterface.OnClickListener(){
                     @Override
