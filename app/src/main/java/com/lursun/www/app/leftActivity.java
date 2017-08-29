@@ -1,9 +1,12 @@
 package com.lursun.www.app;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,6 +18,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.Toast;
 
 public class leftActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
@@ -54,6 +59,19 @@ public class leftActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(intent);
             }
         });
+        LayoutInflater li=getLayoutInflater();
+        SQLiteDatabase db=SQLiteHelper.getDatabase(leftActivity.this);
+        Cursor c=db.rawQuery("Select id,body From Contracttable",null);
+        c.moveToFirst();
+        do {
+            c.getInt(0);
+            c.getString(1);
+            TableRow tr=((TableRow)li.inflate(R.layout.temp,null));
+            ((Button)tr.findViewById(R.id.button)).setText("NO."+String.valueOf(c.getInt(0))+"\n"+c.getString(1));
+            ((TableLayout)findViewById(R.id.listtable)).addView(tr);
+        }while (c.moveToNext());
+
+
     }
 
     @Override

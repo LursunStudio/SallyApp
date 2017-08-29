@@ -36,8 +36,15 @@ public class SQLiteHelper extends SQLiteOpenHelper{
     public static Cursor getUser(){
         String sql="Select * From Usertable";
         return database.rawQuery(sql,null);
+    }
 
-
+    public static void createContract(int last_weight,int target_weight,int point , int day,String body){
+        String sql="Insert Into Contracttable(last_weight,target_weight,point,day,body) Values("+last_weight+","+target_weight+","+point+","+day+",'"+body+"' )";
+        try {
+            database.execSQL(sql);
+        }catch (Exception e){
+            e=e;
+        }
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -47,6 +54,14 @@ public class SQLiteHelper extends SQLiteOpenHelper{
                 "account Text ,"+
                 "passwd Text ,"+
                 "address Text )";
+        db.execSQL(sql);
+        sql="Create Table Contracttable " +
+                "(id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "last_weight Integer ,"+
+                "target_weight Integer ,"+
+                "point Integer ,"+
+                "day Integer,"+
+                "body Text )";
         db.execSQL(sql);
     }
 
