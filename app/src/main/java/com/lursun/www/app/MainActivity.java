@@ -1,6 +1,7 @@
 package com.lursun.www.app;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,7 +15,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        SQLiteHelper.getDatabase(MainActivity.this);
+        Cursor c=SQLiteHelper.getUser();
+        if (c.getCount()>0){
+            Intent intent = new Intent();
+            intent.setClass(MainActivity.this,leftActivity.class);
+            startActivity(intent);
+        }
     }
     public void toLogin(View view){
         Intent intent = new Intent();

@@ -1,6 +1,7 @@
 package com.lursun.www.app;
 
 import android.content.Context;
+import android.database.Cursor;
 import  android.database.sqlite.*;
 import  android.database.sqlite.SQLiteDatabase.*;
 /**
@@ -31,6 +32,12 @@ public class SQLiteHelper extends SQLiteOpenHelper{
     public static void regUser(String name,String account,String passwd){
         String sql="Insert Into Usertable (name,account,passwd) Values ('"+name+"', '"+account+"','"+passwd+"' )";
         database.execSQL(sql);
+    }
+    public static Cursor getUser(){
+        String sql="Select * From Usertable";
+        return database.rawQuery(sql,null);
+
+
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
