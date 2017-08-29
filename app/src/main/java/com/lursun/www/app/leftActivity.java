@@ -61,15 +61,19 @@ public class leftActivity extends AppCompatActivity implements NavigationView.On
         });
         LayoutInflater li=getLayoutInflater();
         SQLiteDatabase db=SQLiteHelper.getDatabase(leftActivity.this);
-        Cursor c=db.rawQuery("Select id,body From Contracttable",null);
-        c.moveToFirst();
-        do {
-            c.getInt(0);
-            c.getString(1);
-            TableRow tr=((TableRow)li.inflate(R.layout.temp,null));
-            ((Button)tr.findViewById(R.id.button)).setText("NO."+String.valueOf(c.getInt(0))+"\n"+c.getString(1));
-            ((TableLayout)findViewById(R.id.listtable)).addView(tr);
-        }while (c.moveToNext());
+        try {
+            Cursor c = db.rawQuery("Select id,body From Contracttable", null);
+            c.moveToFirst();
+            do {
+                c.getInt(0);
+                c.getString(1);
+                TableRow tr = ((TableRow) li.inflate(R.layout.temp, null));
+                ((Button) tr.findViewById(R.id.button)).setText("NO." + String.valueOf(c.getInt(0)) + "\n" + c.getString(1));
+                ((TableLayout) findViewById(R.id.listtable)).addView(tr);
+            } while (c.moveToNext());
+        }catch (Exception e){
+            
+        }
 
 
     }

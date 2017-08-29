@@ -26,7 +26,7 @@ public class setokActivity extends AppCompatActivity {
         SQLiteDatabase db=SQLiteHelper.getDatabase(setokActivity.this);
         Cursor c = db.rawQuery("Select * From Contracttable Where 1=1 Order By id DESC Limit 1", null);
         c.moveToFirst();
-        ((TextView) findViewById(R.id.id)).setText( "邊號："+String.valueOf(c.getInt(0)));
+        ((TextView) findViewById(R.id.id)).setText( "編號："+String.valueOf(c.getInt(0)));
         ((TextView) findViewById(R.id.last_weight)).setText( "目前體重："+String.valueOf(c.getInt(1)));
         ((TextView) findViewById(R.id.target_weight)).setText( "目標體重："+String.valueOf(c.getInt(2)));
         ((TextView) findViewById(R.id.day)).setText( String.valueOf(c.getInt(4))+"天");
