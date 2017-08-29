@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/shape"
     android:padding="10dp">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -11,7 +12,7 @@
         android:textColor="#000000"
         android:text="編號：201713698"
         android:textSize="20dp"
-        android:id="@+id/now_weigh"
+        android:id="@+id/id"
         />
     <TextView
         android:layout_width="wrap_content"
@@ -19,7 +20,7 @@
         android:text="陳小牛"
         android:textColor="#000000"
         android:textSize="35dp"
-        android:id="@+id/name"
+        android:id="@+id/contracter"
         />
 
     <TextView
@@ -28,21 +29,21 @@
         android:text="目前體重：80KG\n"
         android:textColor="#000000"
         android:textSize="25dp"
-        android:id="@+id/now_weight"
+        android:id="@+id/last_weight"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="目標體重：70KG\n"
         android:textColor="#000000"
-        android:textSize="25dp" android:id="@+id/target_weight"
+        android:textSize="25dp"
+        android:id="@+id/target_weight"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="期限："
         android:textColor="#000000"
-        android:id="@+id/date"
         android:textSize="25dp"
         />
     <TextView
@@ -51,17 +52,25 @@
         android:layout_gravity="right"
         android:text="2017/04/01~2017/06/01\n"
         android:textColor="#000000"
-        android:id="@+id/date2"
+        android:id="@+id/day"
         android:textSize="25dp"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="簡述內容：\n\n　　減肥人生!!!讓我更苗條!!!我真的太胖了，為了不重蹈覆轍以及有個好身材，請大家來督促我。"
-        android:id="@+id/briefing"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:text="簡述內容"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="        減肥人生!!!讓我更苗條!!!我真的太胖了，為了不重蹈覆轍以及有個好身材，請大家來督促我。"
+        android:id="@+id/body"
         android:textColor="#000000"
         android:textSize="25dp"
         />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -80,6 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/shape2"
+                android:onClick="toCancelSetok"
                 android:text="放棄"
                 />
         </LinearLayout>
@@ -95,6 +105,7 @@
                 android:background="@drawable/shape2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="toSubmitSetok"
                 android:text="送出"
                 />
         </LinearLayout>

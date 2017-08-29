@@ -15,7 +15,7 @@ public class accumulation extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accumulation);
-        Button backbtn= (Button)findViewById(R.id.button);
+        Button backbtn= (Button)findViewById(R.id.back);
         backbtn.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {

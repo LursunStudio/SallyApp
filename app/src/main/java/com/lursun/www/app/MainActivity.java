@@ -1,6 +1,8 @@
 package com.lursun.www.app;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,37 +11,31 @@ import android.widget.Button;
 
 
 public class MainActivity extends AppCompatActivity {
-    private Button button01;
-    private Button button02;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
-        button01= (Button)findViewById(R.id.button);
-
-        button01.setOnClickListener(new Button.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(MainActivity.this,leftActivity.class);
-                startActivity(intent);
-            }
-        });
-        button02= (Button)findViewById(R.id.button2);
-
-        button02.setOnClickListener(new Button.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(MainActivity.this,registeredActivity.class);
-                startActivity(intent);
-            }
-        });
+        SQLiteDatabase db=SQLiteHelper.getDatabase(MainActivity.this);
+        Cursor c=SQLiteHelper.getUser();
+        if (c.getCount()>0){
+            c.close();
+            db.close();
+            Intent intent = new Intent();
+            intent.setClass(MainActivity.this,leftActivity.class);
+            startActivity(intent);
+        }
     }
-
+    public void toLogin(View view){
+        Intent intent = new Intent();
+        intent.setClass(MainActivity.this,leftActivity.class);
+        startActivity(intent);
+    }
+    public void toReg(View view){
+        Intent intent = new Intent();
+        intent.setClass(MainActivity.this,registeredActivity.class);
+        startActivity(intent);
+    }
 
 
 }

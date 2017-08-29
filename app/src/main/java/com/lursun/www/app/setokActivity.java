@@ -2,6 +2,8 @@ package com.lursun.www.app;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,39 +12,32 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class setokActivity extends AppCompatActivity {
-    private Button normalDialog;
-    private Button normalDialog2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setok);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        initView();
-        initView2();
+        SQLiteDatabase db=SQLiteHelper.getDatabase(setokActivity.this);
+        Cursor c = db.rawQuery("Select * From Contracttable Where 1=1 Order By id DESC Limit 1", null);
+        c.moveToFirst();
+        ((TextView) findViewById(R.id.id)).setText( "編號："+String.valueOf(c.getInt(0)));
+        ((TextView) findViewById(R.id.last_weight)).setText( "目前體重："+String.valueOf(c.getInt(1)));
+        ((TextView) findViewById(R.id.target_weight)).setText( "目標體重："+String.valueOf(c.getInt(2)));
+        ((TextView) findViewById(R.id.day)).setText( String.valueOf(c.getInt(4))+"天");
+        ((TextView) findViewById(R.id.body)).setText( c.getString(5));
+        c.close();
+        c=SQLiteHelper.getUser();
+        c.moveToFirst();
+        ((TextView) findViewById(R.id.contracter)).setText( c.getString(1) );
+        c.close();
     }
-    private void initView() {
-        normalDialog = (Button) findViewById(R.id.button);
-        normalDialog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                normalDialogEvent();
-            }
-        });
-    }
-    private void initView2() {
-        normalDialog2 = (Button) findViewById(R.id.button2);
-        normalDialog2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                normalDialogEvent2();
-            }
-        });
-    }
-    private void normalDialogEvent(){
+    public void toCancelSetok(View view){
         new AlertDialog.Builder(setokActivity.this)
                 .setTitle(R.string.lunch_time)
                 .setMessage(R.string.want_to_eat)
@@ -64,7 +59,7 @@ public class setokActivity extends AppCompatActivity {
                 })
                 .show();
     }
-    private void normalDialogEvent2(){
+    public void toSubmitSetok(View view){
         new AlertDialog.Builder(setokActivity.this)
                 .setTitle(R.string.lunch_time)
                 .setMessage(R.string.set)

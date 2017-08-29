@@ -2,44 +2,55 @@ package com.lursun.www.app;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 
 public class setActivity extends AppCompatActivity {
-    private Button normalDialog;
-    private Button button2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.make_contract);
-         initView();
-        button2= (Button)findViewById(R.id.button2);
-
-        button2.setOnClickListener(new Button.OnClickListener(){
+        SQLiteDatabase db=SQLiteHelper.getDatabase(setActivity.this);
+        Cursor c=SQLiteHelper.getUser();
+        c.moveToFirst();
+        String name=c.getString(1);
+        ((EditText)findViewById(R.id.contracter)).setText(name);
+        c.close();
+        db.close();
+        Button readybtn=(Button)findViewById(R.id.readybtn);
+        readybtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(setActivity.this,setokActivity.class);
-                startActivity(intent);
+                toReady(v);
             }
         });
     }
-    private void initView() {
-        normalDialog = (Button) findViewById(R.id.button);
-        normalDialog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                normalDialogEvent();
-            }
-        });
-    }
+    public void toReady(View view){
+        int last_weight =Integer.parseInt(((EditText)findViewById(R.id.last_weight)).getText().toString());
+        int target_weight =Integer.parseInt(((EditText)findViewById(R.id.target_weight)).getText().toString());
+        int point =Integer.parseInt(((EditText)findViewById(R.id.point)).getText().toString());
+        int day =Integer.parseInt(((EditText)findViewById(R.id.day)).getText().toString());
+        String body=((EditText)findViewById(R.id.body)).getText().toString();
 
-    private void normalDialogEvent(){
+        SQLiteDatabase db=SQLiteHelper.getDatabase(setActivity.this);
+        SQLiteHelper.createContract(last_weight,target_weight,point,day,body);
+        db.close();
+
+
+        Intent intent = new Intent();
+        intent.setClass(setActivity.this,setokActivity.class);
+        startActivity(intent);
+    }
+    public void toCancel(View view){
         new AlertDialog.Builder(setActivity.this)
                 .setTitle(R.string.lunch_time)
                 .setMessage(R.string.want_to_eat)
