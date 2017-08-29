@@ -22,8 +22,7 @@ public class joinActivity extends AppCompatActivity {
         setContentView(R.layout.activity_join);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        initView();
-        initView2();
+
     }
     public void onRadioButtonClicked(View view) {
         boolean checked = ((RadioButton) view).isChecked();
@@ -36,25 +35,8 @@ public class joinActivity extends AppCompatActivity {
                     break;
         }
     }
-    private void initView() {
-        normalDialog = (Button) findViewById(R.id.button);
-        normalDialog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                normalDialogEvent();
-            }
-        });
-    }
-    private void initView2() {
-        normalDialog2 = (Button) findViewById(R.id.button2);
-        normalDialog2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                normalDialogEvent2();
-            }
-        });
-    }
-    private void normalDialogEvent(){
+
+    public void cancle(View view){
         new AlertDialog.Builder(joinActivity.this)
                 .setTitle(R.string.lunch_time)
                 .setMessage(R.string.cancel)
@@ -68,7 +50,7 @@ public class joinActivity extends AppCompatActivity {
                     }
                 }).show();
     }
-    private void normalDialogEvent2(){
+    public void submit(View view){
         new AlertDialog.Builder(joinActivity.this)
                 .setTitle(R.string.lunch_time)
                 .setMessage(R.string.joinok)

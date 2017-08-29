@@ -109,7 +109,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/login"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:background="@drawable/shape2"
@@ -124,7 +124,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/registered"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/shape2"

@@ -45,6 +45,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/name"
                 android:ems="15"
                 android:maxLength="15"
                 android:textSize="28dp" />
@@ -70,6 +71,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/account"
                 android:ems="15"
                 android:maxLength="15"
                 android:textSize="28dp" />
@@ -94,6 +96,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
+                android:id="@+id/passwd"
                 android:ems="15"
                 android:maxLength="15"
                 android:textSize="28dp" />
@@ -117,6 +120,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
+                android:id="@+id/passwd2"
                 android:ems="15"
                 android:maxLength="15"
                 android:textSize="28dp" />
@@ -130,9 +134,10 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/registered"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="registeredEvent"
                 android:background="@drawable/shape2"
                 android:text="註冊" />
 
