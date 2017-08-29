@@ -20,7 +20,6 @@ public class SQLiteHelper extends SQLiteOpenHelper{
         super(context, name, factory, version);
     }
 
-    // 需要資料庫的元件呼叫這個方法，這個方法在一般的應用都不需要修改
     public static SQLiteDatabase getDatabase(Context context) {
         if (database == null || !database.isOpen()) {
             database = new SQLiteHelper(context, DATABASE_NAME,
@@ -29,18 +28,26 @@ public class SQLiteHelper extends SQLiteOpenHelper{
 
         return database;
     }
-
+    public static void regUser(String name,String account,String passwd){
+        String sql="Insert Into Usertable (name,account,passwd) Values ('"+name+"', '"+account+"','"+passwd+"' )";
+        database.execSQL(sql);
+    }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        // 建立應用程式需要的表格
-        // 待會再回來完成它
+        String sql="Create Table Usertable " +
+                "(id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "name Text ,"+
+                "account Text ,"+
+                "passwd Text ,"+
+                "address Text )";
+        db.execSQL(sql);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // 刪除原有的表格
         // 待會再回來完成它
-
+        db.execSQL("DROP TABLE IF EXISTS Usertable" );
         // 呼叫onCreate建立新版的表格
         onCreate(db);
     }
