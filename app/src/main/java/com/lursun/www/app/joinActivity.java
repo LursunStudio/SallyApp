@@ -24,7 +24,7 @@ public class joinActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         initView();
         initView2();
-        }
+    }
     public void onRadioButtonClicked(View view) {
         boolean checked = ((RadioButton) view).isChecked();
         switch(view.getId()) {
@@ -36,7 +36,6 @@ public class joinActivity extends AppCompatActivity {
                     break;
         }
     }
-
     private void initView() {
         normalDialog = (Button) findViewById(R.id.button);
         normalDialog.setOnClickListener(new View.OnClickListener() {
@@ -67,10 +66,7 @@ public class joinActivity extends AppCompatActivity {
                         intent.setClass(joinActivity.this,LookActivity.class);
                         joinActivity.this.startActivity(intent);
                     }
-                })
-
-
-                .show();
+                }).show();
     }
     private void normalDialogEvent2(){
         new AlertDialog.Builder(joinActivity.this)
@@ -84,9 +80,6 @@ public class joinActivity extends AppCompatActivity {
                         intent.setClass(joinActivity.this,leftActivity.class);
                         joinActivity.this.startActivity(intent);
                     }
-                })
-
-
-                .show();
+                }).show();
     }
 }
