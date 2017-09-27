@@ -137,7 +137,7 @@
                 android:id="@+id/registered"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="registeredEvent"
+                android:onClick="registerEvent"
                 android:background="@drawable/shape2"
                 android:text="註冊" />
 

@@ -43,7 +43,7 @@
             android:label="@string/title_activity_setok"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".registeredActivity"
+            android:name=".registerActivity"
             android:label="@string/title_activity_registered"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

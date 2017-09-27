@@ -5,9 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
-import android.widget.Button;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -24,17 +22,20 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent();
             intent.setClass(MainActivity.this,leftActivity.class);
             startActivity(intent);
+            this.finish();
         }
     }
     public void toLogin(View view){
         Intent intent = new Intent();
         intent.setClass(MainActivity.this,leftActivity.class);
         startActivity(intent);
+        this.finish();
     }
     public void toReg(View view){
         Intent intent = new Intent();
-        intent.setClass(MainActivity.this,registeredActivity.class);
+        intent.setClass(MainActivity.this,registerActivity.class);
         startActivity(intent);
+        this.finish();
     }
 
 
