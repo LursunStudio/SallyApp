@@ -13,13 +13,13 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
-public class setActivity extends AppCompatActivity {
+public class SetActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.make_contract);
-        SQLiteDatabase db=SQLiteHelper.getDatabase(setActivity.this);
+        SQLiteDatabase db=SQLiteHelper.getDatabase(SetActivity.this);
         Cursor c=SQLiteHelper.getUser();
         c.moveToFirst();
         String name=c.getString(1);
@@ -41,17 +41,17 @@ public class setActivity extends AppCompatActivity {
         int day =Integer.parseInt(((EditText)findViewById(R.id.day)).getText().toString());
         String body=((EditText)findViewById(R.id.body)).getText().toString();
 
-        SQLiteDatabase db=SQLiteHelper.getDatabase(setActivity.this);
+        SQLiteDatabase db=SQLiteHelper.getDatabase(SetActivity.this);
         SQLiteHelper.createContract(last_weight,target_weight,point,day,body);
         db.close();
 
 
         Intent intent = new Intent();
-        intent.setClass(setActivity.this,setokActivity.class);
+        intent.setClass(SetActivity.this,SetokActivity.class);
         startActivity(intent);
     }
     public void toCancel(View view){
-        new AlertDialog.Builder(setActivity.this)
+        new AlertDialog.Builder(SetActivity.this)
                 .setTitle(R.string.lunch_time)
                 .setMessage(R.string.want_to_eat)
                 .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
@@ -59,8 +59,8 @@ public class setActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         Toast.makeText(getApplicationContext(), R.string.gogo, Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent();
-                        intent.setClass(setActivity.this,leftActivity.class);
-                        setActivity.this.startActivity(intent);
+                        intent.setClass(SetActivity.this,LeftActivity.class);
+                        SetActivity.this.startActivity(intent);
                     }
                 })
 

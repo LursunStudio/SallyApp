@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +22,7 @@ public class LookActivity extends AppCompatActivity {
     }
     public void toJoin(View view){
         Intent intent = new Intent();
-        intent.setClass(LookActivity.this,joinActivity.class);
+        intent.setClass(LookActivity.this,JoinActivity.class);
         startActivity(intent);
     }
     public void showListDialog(View view){

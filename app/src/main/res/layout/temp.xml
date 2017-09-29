@@ -2,7 +2,7 @@
 <TableRow
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.lursun.www.app.setokActivity"
+    tools:context="com.lursun.www.app.SetokActivity"
     >
 
     <Button

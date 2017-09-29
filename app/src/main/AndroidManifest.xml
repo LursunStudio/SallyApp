@@ -9,20 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".leftActivity"
+            android:name=".LeftActivity"
             android:exported="true"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".accumulation"
+            android:name=".Accumulation"
             android:exported="true"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
@@ -31,31 +30,31 @@
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".setActivity"
+            android:name=".SetActivity"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".joinActivity"
+            android:name=".JoinActivity"
             android:label="@string/title_activity_join"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".setokActivity"
+            android:name=".SetokActivity"
             android:label="@string/title_activity_setok"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".registerActivity"
+            android:name=".RegisterActivity"
             android:label="@string/title_activity_registered"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".update"
+            android:name=".Update"
             android:label="@string/title_activity_update"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".about"
+            android:name=".About"
             android:label="@string/title_activity_about"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".setting"
+            android:name=".Setting"
             android:label="@string/title_activity_setting"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>

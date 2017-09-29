@@ -5,17 +5,14 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class setokActivity extends AppCompatActivity {
+public class SetokActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +20,7 @@ public class setokActivity extends AppCompatActivity {
         setContentView(R.layout.activity_setok);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        SQLiteDatabase db=SQLiteHelper.getDatabase(setokActivity.this);
+        SQLiteDatabase db=SQLiteHelper.getDatabase(SetokActivity.this);
         Cursor c = db.rawQuery("Select * From Contracttable Where 1=1 Order By id DESC Limit 1", null);
         c.moveToFirst();
         ((TextView) findViewById(R.id.id)).setText( "編號："+String.valueOf(c.getInt(0)));
@@ -38,7 +35,7 @@ public class setokActivity extends AppCompatActivity {
         c.close();
     }
     public void toCancelSetok(View view){
-        new AlertDialog.Builder(setokActivity.this)
+        new AlertDialog.Builder(SetokActivity.this)
                 .setTitle(R.string.lunch_time)
                 .setMessage(R.string.want_to_eat)
                 .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
@@ -46,8 +43,8 @@ public class setokActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         Toast.makeText(getApplicationContext(), R.string.gogo, Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent();
-                        intent.setClass(setokActivity.this,leftActivity.class);
-                        setokActivity.this.startActivity(intent);
+                        intent.setClass(SetokActivity.this,LeftActivity.class);
+                        SetokActivity.this.startActivity(intent);
                     }
                 })
 
@@ -60,7 +57,7 @@ public class setokActivity extends AppCompatActivity {
                 .show();
     }
     public void toSubmitSetok(View view){
-        new AlertDialog.Builder(setokActivity.this)
+        new AlertDialog.Builder(SetokActivity.this)
                 .setTitle(R.string.lunch_time)
                 .setMessage(R.string.set)
                 .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
@@ -68,8 +65,8 @@ public class setokActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         Toast.makeText(getApplicationContext(), R.string.setok, Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent();
-                        intent.setClass(setokActivity.this,leftActivity.class);
-                        setokActivity.this.startActivity(intent);
+                        intent.setClass(SetokActivity.this,LeftActivity.class);
+                        SetokActivity.this.startActivity(intent);
                     }
                 })
 

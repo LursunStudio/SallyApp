@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.lursun.www.app.leftActivity"
+    tools:context="com.lursun.www.app.LeftActivity"
     tools:showIn="@layout/app_bar_left">
 
 </android.support.constraint.ConstraintLayout>

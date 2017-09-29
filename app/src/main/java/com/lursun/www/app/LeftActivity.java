@@ -5,7 +5,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -17,12 +16,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
-import android.widget.Toast;
 
-public class leftActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
+public class LeftActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
 {
 
     private Button button04;
@@ -46,8 +43,8 @@ public class leftActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
-                intent.setClass(leftActivity.this,setActivity.class);
-                leftActivity.this.startActivity(intent);
+                intent.setClass(LeftActivity.this,SetActivity.class);
+                LeftActivity.this.startActivity(intent);
             }
         });
         button04= (Button)findViewById(R.id.button4);
@@ -55,12 +52,12 @@ public class leftActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(leftActivity.this,LookActivity.class);
+                intent.setClass(LeftActivity.this,LookActivity.class);
                 startActivity(intent);
             }
         });
         LayoutInflater li=getLayoutInflater();
-        SQLiteDatabase db=SQLiteHelper.getDatabase(leftActivity.this);
+        SQLiteDatabase db=SQLiteHelper.getDatabase(LeftActivity.this);
         try {
             Cursor c = db.rawQuery("Select id,body From Contracttable", null);
             c.moveToFirst();
@@ -118,19 +115,19 @@ public class leftActivity extends AppCompatActivity implements NavigationView.On
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
-            Intent intent = new Intent(this,accumulation.class);
+            Intent intent = new Intent(this,Accumulation.class);
             startActivity(intent);
             this.finish();
         } else if (id == R.id.nav_gallery) {
-            Intent intent = new Intent(this,update.class);
+            Intent intent = new Intent(this,Update.class);
             startActivity(intent);
             this.finish();
         } else if (id == R.id.nav_share) {
-            Intent intent = new Intent(this,about.class);
+            Intent intent = new Intent(this,About.class);
             startActivity(intent);
             this.finish();
         } else if (id == R.id.nav_send) {
-            Intent intent = new Intent(this,setting.class);
+            Intent intent = new Intent(this,Setting.class);
             startActivity(intent);
             this.finish();
         }

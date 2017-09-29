@@ -10,9 +10,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import java.net.HttpURLConnection;
-import java.net.URL;
 
-public class registerActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,20 +29,20 @@ public class registerActivity extends AppCompatActivity {
             HttpURLConnection conn = Share.getConn( String.format("/createAccount?name=%s&account=%s&passwd=%s" ,name,account,passwd)  );
             String result=Share.getBody(conn);
             if(result.equals("")){
-                Toast.makeText(registerActivity.this,"網路問題",Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegisterActivity.this,"網路問題",Toast.LENGTH_SHORT).show();
             }else{
-                Toast.makeText(registerActivity.this,"Register:"+result,Toast.LENGTH_SHORT).show();
-                SQLiteHelper.getDatabase(registerActivity.this);
+                Toast.makeText(RegisterActivity.this,"Register:"+result,Toast.LENGTH_SHORT).show();
+                SQLiteHelper.getDatabase(RegisterActivity.this);
                 SQLiteHelper.regUser(name,account,passwd);
                 Intent intent = new Intent();
-                intent.setClass(registerActivity.this,leftActivity.class);
+                intent.setClass(RegisterActivity.this,LeftActivity.class);
                 startActivity(intent);
                 this.finish();
             }
         }else if(name.equals("") || account.equals("") || passwd.equals("")){
-            Toast.makeText(registerActivity.this,"訊息不完整",Toast.LENGTH_SHORT).show();
+            Toast.makeText(RegisterActivity.this,"訊息不完整",Toast.LENGTH_SHORT).show();
         }else{
-            Toast.makeText(registerActivity.this,"密碼不一樣",Toast.LENGTH_SHORT).show();
+            Toast.makeText(RegisterActivity.this,"密碼不一樣",Toast.LENGTH_SHORT).show();
         }
 
 
