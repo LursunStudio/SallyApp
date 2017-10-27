@@ -27,14 +27,12 @@ public class LookActivity extends AppCompatActivity {
     }
     public void showListDialog(View view){
         new AlertDialog.Builder(LookActivity.this)
-                .setItems(lunch.toArray(new String[lunch.size()]), new DialogInterface.OnClickListener(){
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        String name = lunch.get(which);
-
-                    }
-                })
-                .show();
+            .setItems(lunch.toArray(new String[lunch.size()]), new DialogInterface.OnClickListener(){
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    String name = lunch.get(which);
+                }
+            }).show();
     }
     private void initData() {
         lunch = new ArrayList<>();

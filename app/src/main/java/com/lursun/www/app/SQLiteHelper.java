@@ -24,7 +24,7 @@ public class SQLiteHelper extends SQLiteOpenHelper{
     public static SQLiteDatabase getDatabase(Context context) {
         if (database == null || !database.isOpen()) {
             database = new SQLiteHelper(context, DATABASE_NAME,
-                    null, VERSION).getWritableDatabase();
+            null, VERSION).getWritableDatabase();
         }
 
         return database;
@@ -49,19 +49,19 @@ public class SQLiteHelper extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase db) {
         String sql="Create Table Usertable " +
-                "(id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "name Text ,"+
-                "account Text ,"+
-                "passwd Text ,"+
-                "address Text )";
+            "(id INTEGER PRIMARY KEY AUTOINCREMENT," +
+            "name Text ,"+
+            "account Text ,"+
+            "passwd Text ,"+
+            "address Text )";
         db.execSQL(sql);
         sql="Create Table Contracttable " +
-                "(id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "last_weight Integer ,"+
-                "target_weight Integer ,"+
-                "point Integer ,"+
-                "day Integer,"+
-                "body Text )";
+            "(id INTEGER PRIMARY KEY AUTOINCREMENT," +
+            "last_weight Integer ,"+
+            "target_weight Integer ,"+
+            "point Integer ,"+
+            "day Integer,"+
+            "body Text )";
         db.execSQL(sql);
     }
 

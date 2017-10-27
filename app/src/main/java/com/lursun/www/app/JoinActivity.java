@@ -33,30 +33,30 @@ public class JoinActivity extends AppCompatActivity {
 
     public void cancle(View view){
         new AlertDialog.Builder(JoinActivity.this)
-                .setTitle(R.string.lunch_time)
-                .setMessage(R.string.cancel)
-                .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getApplicationContext(), R.string.cancel2, Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent();
-                        intent.setClass(JoinActivity.this,LookActivity.class);
-                        JoinActivity.this.startActivity(intent);
-                    }
-                }).show();
+            .setTitle(R.string.lunch_time)
+            .setMessage(R.string.cancel)
+            .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Toast.makeText(getApplicationContext(), R.string.cancel2, Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent();
+                    intent.setClass(JoinActivity.this,LookActivity.class);
+                    JoinActivity.this.startActivity(intent);
+                }
+            }).show();
     }
     public void submit(View view){
         new AlertDialog.Builder(JoinActivity.this)
-                .setTitle(R.string.lunch_time)
-                .setMessage(R.string.joinok)
-                .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getApplicationContext(), R.string.settok, Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent();
-                        intent.setClass(JoinActivity.this,LeftActivity.class);
-                        JoinActivity.this.startActivity(intent);
-                    }
-                }).show();
+            .setTitle(R.string.lunch_time)
+            .setMessage(R.string.joinok)
+            .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Toast.makeText(getApplicationContext(), R.string.settok, Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent();
+                    intent.setClass(JoinActivity.this,LeftActivity.class);
+                    JoinActivity.this.startActivity(intent);
+                }
+            }).show();
     }
 }

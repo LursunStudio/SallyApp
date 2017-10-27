@@ -52,25 +52,25 @@ public class SetActivity extends AppCompatActivity {
     }
     public void toCancel(View view){
         new AlertDialog.Builder(SetActivity.this)
-                .setTitle(R.string.lunch_time)
-                .setMessage(R.string.want_to_eat)
-                .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getApplicationContext(), R.string.gogo, Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent();
-                        intent.setClass(SetActivity.this,LeftActivity.class);
-                        SetActivity.this.startActivity(intent);
-                    }
-                })
+            .setTitle(R.string.lunch_time)
+            .setMessage(R.string.want_to_eat)
+            .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Toast.makeText(getApplicationContext(), R.string.gogo, Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent();
+                    intent.setClass(SetActivity.this,LeftActivity.class);
+                    SetActivity.this.startActivity(intent);
+                }
+            })
 
-                .setNeutralButton(R.string.not_hungry, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getApplicationContext(), R.string.diet, Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .show();
+            .setNeutralButton(R.string.not_hungry, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Toast.makeText(getApplicationContext(), R.string.diet, Toast.LENGTH_SHORT).show();
+                }
+            })
+            .show();
     }
 
 }
